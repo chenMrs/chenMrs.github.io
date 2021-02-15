@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>博客</title>
+      <link href="2021/02/15/bo-ke/"/>
+      <url>2021/02/15/bo-ke/</url>
+      
+        <content type="html"><![CDATA[<p>####今天和昨天用了大概一天的时间，自己搭建一个博客，虽然用的时间比较长，但是有结果总归是好的。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> trifles </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo(2)</title>
       <link href="2021/02/15/hexo-2/"/>
       <url>2021/02/15/hexo-2/</url>
