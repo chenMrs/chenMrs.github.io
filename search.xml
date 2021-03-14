@@ -4,9 +4,28 @@
   
     
     <entry>
+      <title>第一次笔试下</title>
+      <link href="2021/03/14/di-yi-ci-bi-shi-xia/"/>
+      <url>2021/03/14/di-yi-ci-bi-shi-xia/</url>
+      
+        <content type="html"><![CDATA[<p>对这次碰到的笔试题目，进行学习一波后写了这篇博客（题目顺序不是跟着上篇的）</p><h2 id="1-typeof与instanceof的区别"><a href="#1-typeof与instanceof的区别" class="headerlink" title="1.typeof与instanceof的区别"></a>1.typeof与instanceof的区别</h2><ul><li>typeof 一般只能六种返回值：number  string boolean  object  function undefined </li><li>注意：typeof(null)—&gt;object   typeof(NaN)—-&gt;number   typeof(undefined)—–&gt;undefined</li><li>instanceof : A instanceof B —&gt; 看A对象的原型链上有没有B原型或A对象是不是B构造函数构造出的对象<br>用instanceof可以具体知道是Array还是object也就是能分清[] {}两种对象</li><li>扩展：区分 {} [] 三种方法<ol><li>[].constructor—-&gt;function Array()<br>{}.constructor—-&gt;function object()</li><li>[] instanceof Array—&gt;true<br>{}  instanceof Array—-&gt;false</li><li>object.prototype.toString.call([])—-&gt;[object Array]<br>object.prototype.toString.call({})—-&gt;[object Object]</li></ol></li></ul><h2 id="2-div盒模型"><a href="#2-div盒模型" class="headerlink" title="2.div盒模型"></a>2.div盒模型</h2><ul><li>就是用来装页面上的元素的矩形区域。</li><li>CSS中的盒子模型包括IE盒子模型和标准的W3C盒子模型</li><li>两者的区别：width包含范围。<ol><li>在标准的盒子模型中，width指content部分宽度</li><li>在IE盒子模型中，width指content+padding+border这三个部分的宽度，故使得计算整个盒子得宽度时存在着差异</li></ol></li><li>计算差异：<ol><li>标准盒子模型的盒子宽度：左右border+左右padding+widtho</li><li>IE模型的盒子宽度：width</li></ol></li><li>CSS3中引入了box-sizing属性，box-sizing:content-box;表示标准的盒子模型；box-sizing:border-box;表示时IE盒子模型</li><li>CSS盒子模型本质是一个盒子，封装周围的HTML元素，它包括：边框，边距，填充和实际内容。</li><li>标准盒模型：一个块的总宽度=width+margin(左右)+padding(左右)+border(左右)</li><li>怪异盒模型：一个块的总宽度=width+margin(左右)(既width已经包含了padding和border值)</li></ul><h2 id="3-CSS选择器优先级"><a href="#3-CSS选择器优先级" class="headerlink" title="3.CSS选择器优先级"></a>3.CSS选择器优先级</h2><ul><li>id class 标签选择器，伪元素选择器(before after)，伪类选择器(first-child)</li><li>同一个元素引用了多个样式时，排在后面的优先级高</li><li>样式选择器的类型不同时，优先级顺序为：id选择器&gt;class选择器&gt;标签选择器&gt;继承选择器</li><li>带有 !important标记的样式属性优先级最高</li><li>样式表的来源不同时：优先级顺序是：内联样式》内部样式》外部样式&gt;浏览器自定义样式&gt;浏览器默认样式</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 笔试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一次笔试上</title>
-      <link href="2021/03/14/di-yi-ci-bi-shi/"/>
-      <url>2021/03/14/di-yi-ci-bi-shi/</url>
+      <link href="2021/03/14/di-yi-ci-bi-shi-shang/"/>
+      <url>2021/03/14/di-yi-ci-bi-shi-shang/</url>
       
         <content type="html"><![CDATA[<p>今天早早的来到图书馆，赶早的抢了个好位置，正在学习的时候，之前投过的公司的hr给我发了信息，让我发简历过去，再根据它们公司的制度填了申请资料。没想到过一会就发了笔试题。一点准备都没有，脑子蒙蒙的写完了笔试题，让我印象最深刻的问题是提高css选择器优先级的方式。感觉自己从来没有考虑过这个问题。然后写完我就感觉自己没戏了。但是还是要总结一下笔试的题目。问题如下：</p><h2 id="1-数组去重"><a href="#1-数组去重" class="headerlink" title="1.数组去重"></a>1.数组去重</h2><ul><li>我用的是我一直用的方法 Array.from(new Set(arr))<h2 id="2-实现左右固定，中间适应的方式"><a href="#2-实现左右固定，中间适应的方式" class="headerlink" title="2.实现左右固定，中间适应的方式"></a>2.实现左右固定，中间适应的方式</h2></li><li>我用的是左栏左浮动 右栏右浮动 中间栏放最后<h2 id="3-获取对象key值"><a href="#3-获取对象key值" class="headerlink" title="3.获取对象key值"></a>3.获取对象key值</h2></li><li>我写了两种 循环 object.keys()<h2 id="4-typeof与instanceof区别"><a href="#4-typeof与instanceof区别" class="headerlink" title="4.typeof与instanceof区别"></a>4.typeof与instanceof区别</h2></li><li>我大致写的是typeof返回字符串 instanceof是用于判断一个变量是否某个对象的实例<h2 id="5-css选择器优先级"><a href="#5-css选择器优先级" class="headerlink" title="5.css选择器优先级"></a>5.css选择器优先级</h2></li><li>style内部写的&gt;id&gt;class&gt;标签&gt;继承<h2 id="6-css水平居中"><a href="#6-css水平居中" class="headerlink" title="6.css水平居中"></a>6.css水平居中</h2></li><li>让我写多种 我好像写重复了 </li><li>1.margin + width</li><li>2.display：inline-block + text-align:center               </li><li>3.绝对定位+transform      <h2 id="7-div盒模型"><a href="#7-div盒模型" class="headerlink" title="7.div盒模型"></a>7.div盒模型</h2></li><li>我没明白它的考点是什么 我就写div具有内容，内外边距，边框属性。<br>写到这感觉自己更凉了，害，等我学习一波再来写下一篇。</li></ul>]]></content>
       
