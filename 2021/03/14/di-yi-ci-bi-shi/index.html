@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="你好，hexo, chenMrs_Blog">
+    <meta name="keywords" content="第一次笔试上, chenMrs_Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>你好，hexo | chenMrs_Blog</title>
+    <title>第一次笔试上 | chenMrs_Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">你好，hexo</h1>
+                    <h1 class="description center-align post-title">第一次笔试上</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E7%AC%94%E8%AF%95/">
+                                <span class="chip bg-color">笔试</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-15
+                    2021-03-14
                 </div>
                 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    653
+                    380
                 </div>
                 
 
@@ -477,13 +477,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-下载node-js-最好下载12-x版本，这样在部署到github上不出问题"><a href="#1-下载node-js-最好下载12-x版本，这样在部署到github上不出问题" class="headerlink" title="1.下载node.js(最好下载12.x版本，这样在部署到github上不出问题)"></a>1.下载node.js(最好下载12.x版本，这样在部署到github上不出问题)</h2><h2 id="2-下载git"><a href="#2-下载git" class="headerlink" title="2.下载git"></a>2.下载git</h2><h2 id="3-创建github仓库-用自己的注册名称，为特殊的仓库"><a href="#3-创建github仓库-用自己的注册名称，为特殊的仓库" class="headerlink" title="3.创建github仓库(用自己的注册名称，为特殊的仓库)"></a>3.创建github仓库(用自己的注册名称，为特殊的仓库)</h2><h3 id="1-配置ssh-key"><a href="#1-配置ssh-key" class="headerlink" title="1.配置ssh key"></a>1.配置ssh key</h3><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。<br><br>$ cd ~/. ssh       检查本机已存在的ssh密钥<br><br>如果提示：No such file or directory 说明你是第一次使用git。<br><br>ssh-keygen -t rsa -C “邮件地址”<br><br>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br></p>
-<h2 id="4-下载hexo"><a href="#4-下载hexo" class="headerlink" title="4.下载hexo"></a>4.下载hexo</h2><h3 id="1-安装之前先来说几个注意事项："><a href="#1-安装之前先来说几个注意事项：" class="headerlink" title="1.安装之前先来说几个注意事项："></a>1.安装之前先来说几个注意事项：</h3><p>很多命令既可以用Windows的cmd来完成，也可以使用git bash来完成，但是部分命令会有一些问题，为避免不必要的问题，建议全部使用git bash来执行；<br><br>hexo不同版本差别比较大，网上很多文章的配置信息都是基于2.x的，所以注意不要被误导；<br><br>hexo有2种_config.yml文件，一个是根目录下的全局的_config.yml，一个是各个theme下的；<br></p>
-<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><p>$ npm install -g hexo</p>
-<h3 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3.初始化"></a>3.初始化</h3><p>在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是F:\Workspaces\hexo，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。<br></p>
-<p>$ cd /f/Workspaces/hexo/<br><br>$ hexo init<br><br>hexo会自动下载一些文件到这个目录，包括node_modules，<br><br><br>$ hexo g    生成<br>$ hexo s    启动服务<br>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的：</p>
-<p>hexo s是开启本地预览服务，打开浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，因为4000这个端口太常见了，解决端口冲突问题请参考这篇文章：<a target="_blank" rel="noopener" href="http://blog.liuxianan.com/windows-port-bind.html">端口冲突</a></p>
-<p>第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子：</p>
+                <p>今天早早的来到图书馆，赶早的抢了个好位置，正在学习的时候，之前投过的公司的hr给我发了信息，让我发简历过去，再根据它们公司的制度填了申请资料。没想到过一会就发了笔试题。一点准备都没有，脑子蒙蒙的写完了笔试题，让我印象最深刻的问题是提高css选择器优先级的方式。感觉自己从来没有考虑过这个问题。然后写完我就感觉自己没戏了。但是还是要总结一下笔试的题目。问题如下：</p>
+<h2 id="1-数组去重"><a href="#1-数组去重" class="headerlink" title="1.数组去重"></a>1.数组去重</h2><ul>
+<li>我用的是我一直用的方法 Array.from(new Set(arr))<h2 id="2-实现左右固定，中间适应的方式"><a href="#2-实现左右固定，中间适应的方式" class="headerlink" title="2.实现左右固定，中间适应的方式"></a>2.实现左右固定，中间适应的方式</h2></li>
+<li>我用的是左栏左浮动 右栏右浮动 中间栏放最后<h2 id="3-获取对象key值"><a href="#3-获取对象key值" class="headerlink" title="3.获取对象key值"></a>3.获取对象key值</h2></li>
+<li>我写了两种 循环 object.keys()<h2 id="4-typeof与instanceof区别"><a href="#4-typeof与instanceof区别" class="headerlink" title="4.typeof与instanceof区别"></a>4.typeof与instanceof区别</h2></li>
+<li>我大致写的是typeof返回字符串 instanceof是用于判断一个变量是否某个对象的实例<h2 id="5-css选择器优先级"><a href="#5-css选择器优先级" class="headerlink" title="5.css选择器优先级"></a>5.css选择器优先级</h2></li>
+<li>style内部写的&gt;id&gt;class&gt;标签&gt;继承<h2 id="6-css水平居中"><a href="#6-css水平居中" class="headerlink" title="6.css水平居中"></a>6.css水平居中</h2></li>
+<li>让我写多种 我好像写重复了 </li>
+<li>1.margin + width</li>
+<li>2.display：inline-block + text-align:center               </li>
+<li><ol start="3">
+<li>绝对定位+transform      <h2 id="7-div盒模型"><a href="#7-div盒模型" class="headerlink" title="7.div盒模型"></a>7.div盒模型</h2></li>
+</ol>
+</li>
+<li>我没明白它的考点是什么 我就写div具有内容，内外边距，边框属性。<br>写到这感觉自己更凉了，害，等我学习一波再来写下一篇。</li>
+</ul>
 
                 
             </div>
@@ -510,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chenMrs.github.io/2021/02/15/ni-hao-hexo/">https://chenMrs.github.io/2021/02/15/ni-hao-hexo/</a>
+                    <a href="https://chenMrs.github.io/2021/03/14/di-yi-ci-bi-shi/">https://chenMrs.github.io/2021/03/14/di-yi-ci-bi-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,8 +557,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E7%AC%94%E8%AF%95/">
+                                    <span class="chip bg-color">笔试</span>
                                 </a>
                             
                         </div>
@@ -719,17 +728,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/02/15/hexo-2/">
+                <a href="/2021/03/14/di-yi-ci-bi-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="hexo(2)">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="第一次笔试上">
                         
-                        <span class="card-title">hexo(2)</span>
+                        <span class="card-title">第一次笔试上</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -739,9 +749,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -750,11 +760,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E7%AC%94%E8%AF%95/">
+                        <span class="chip bg-color">笔试</span>
                     </a>
                     
                 </div>
@@ -768,13 +779,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/14/hello-world/">
+                <a href="/2021/02/19/chui-zhi-ju-zhong-ji-chong-fang-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="垂直居中几种方式">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">垂直居中几种方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -785,15 +796,27 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            chenMrs
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/" class="post-category">
+                                    面试题目
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
                 </div>
                 
             </div>
