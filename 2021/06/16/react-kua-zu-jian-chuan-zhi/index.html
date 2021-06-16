@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一次笔试上, chenMrs_Blog">
+    <meta name="keywords" content="React跨组件传值, chenMrs_Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一次笔试上 | chenMrs_Blog</title>
+    <title>React跨组件传值 | chenMrs_Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一次笔试上</h1>
+                    <h1 class="description center-align post-title">React跨组件传值</h1>
                 </div>
             </div>
         </div>
@@ -432,14 +432,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AF%95/">
-                                <span class="chip bg-color">笔试</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/React/" class="post-category">
+                                React
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -448,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-14
+                    2021-06-16
                 </div>
                 
 
@@ -457,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    381
+                    363
                 </div>
                 
 
@@ -477,19 +486,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>今天早早的来到图书馆，赶早的抢了个好位置，正在学习的时候，之前投过的公司的hr给我发了信息，让我发简历过去，再根据它们公司的制度填了申请资料。没想到过一会就发了笔试题。一点准备都没有，脑子蒙蒙的写完了笔试题，让我印象最深刻的问题是提高css选择器优先级的方式。感觉自己从来没有考虑过这个问题。然后写完我就感觉自己没戏了。但是还是要总结一下笔试的题目。问题如下：</p>
-<h2 id="1-数组去重"><a href="#1-数组去重" class="headerlink" title="1.数组去重"></a>1.数组去重</h2><ul>
-<li>我用的是我一直用的方法 Array.from(new Set(arr))<h2 id="2-实现左右固定，中间适应的方式"><a href="#2-实现左右固定，中间适应的方式" class="headerlink" title="2.实现左右固定，中间适应的方式"></a>2.实现左右固定，中间适应的方式</h2></li>
-<li>我用的是左栏左浮动 右栏右浮动 中间栏放最后<h2 id="3-获取对象key值"><a href="#3-获取对象key值" class="headerlink" title="3.获取对象key值"></a>3.获取对象key值</h2></li>
-<li>我写了两种 循环 object.keys()<h2 id="4-typeof与instanceof区别"><a href="#4-typeof与instanceof区别" class="headerlink" title="4.typeof与instanceof区别"></a>4.typeof与instanceof区别</h2></li>
-<li>我大致写的是typeof返回字符串 instanceof是用于判断一个变量是否某个对象的实例<h2 id="5-css选择器优先级"><a href="#5-css选择器优先级" class="headerlink" title="5.css选择器优先级"></a>5.css选择器优先级</h2></li>
-<li>style内部写的&gt;id&gt;class&gt;标签&gt;继承<h2 id="6-css水平居中"><a href="#6-css水平居中" class="headerlink" title="6.css水平居中"></a>6.css水平居中</h2></li>
-<li>让我写多种 我好像写重复了 </li>
-<li>1.margin + width</li>
-<li>2.display：inline-block + text-align:center               </li>
-<li>3.绝对定位+transform      <h2 id="7-div盒模型"><a href="#7-div盒模型" class="headerlink" title="7.div盒模型"></a>7.div盒模型</h2></li>
-<li>我没明白它的考点是什么 我就写div具有内容，内外边距，边框属性。<br>写到这感觉自己更凉了，害，等我学习一波再来写下一篇。</li>
-</ul>
+                <h4 id="为什么要跨组件传值？"><a href="#为什么要跨组件传值？" class="headerlink" title="为什么要跨组件传值？"></a>为什么要跨组件传值？</h4><pre class="line-numbers language-在单纯的父子传参中" data-language="在单纯的父子传参中"><div class="caption"><span>this.props 就可以了。子传父也是通过调用父组件的方法去改变参数变化,假如在企业项目中不</span></div><code class="language-在单纯的父子传参中">只是单纯的父子传参，还有爷爷组件和孙子组件或者重孙玄孙甚至可能...玄玄玄孙等等，就好比自己的亲戚的七大姑八
+大姨一样错综复杂，所以这时候 React 提供了一个非常简便和实用的东西<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="具体实现步骤"><a href="#具体实现步骤" class="headerlink" title="具体实现步骤"></a>具体实现步骤</h3><h4 id="1-利用-react-脚手架搭建一个项目"><a href="#1-利用-react-脚手架搭建一个项目" class="headerlink" title="1.利用 react 脚手架搭建一个项目"></a>1.利用 react 脚手架搭建一个项目</h4><h4 id="2-创建-test1-js-test2-js-context-js"><a href="#2-创建-test1-js-test2-js-context-js" class="headerlink" title="2.创建 test1.js test2.js context.js"></a>2.创建 test1.js test2.js context.js</h4><h4 id="3-context-js-文件内容"><a href="#3-context-js-文件内容" class="headerlink" title="3.context.js 文件内容"></a>3.context.js 文件内容</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> context <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> context<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="4-App-js-文件内容"><a href="#4-App-js-文件内容" class="headerlink" title="4.App.js 文件内容"></a>4.App.js 文件内容</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>context<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token string">"我是爷爷"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Test1 <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>context<span class="token punctuation">.</span>Provider<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="5-Test1-js-文件内容"><a href="#5-Test1-js-文件内容" class="headerlink" title="5.Test1.js 文件内容"></a>5.Test1.js 文件内容</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Tets2 <span class="token keyword">from</span> <span class="token string">"./Tets2"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Test1</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        test1
+        <span class="token operator">&lt;</span>Tets2 <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="6-Tets2-js-文件内容"><a href="#6-Tets2-js-文件内容" class="headerlink" title="6.Tets2.js 文件内容"></a>6.Tets2.js 文件内容</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> context <span class="token keyword">from</span> <span class="token string">"./context"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Tets2</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>context<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+          <span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Test2接受到值"</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token operator">&lt;</span>h3<span class="token operator">></span><span class="token punctuation">&#123;</span>value<span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span><span class="token punctuation">;</span>
+          <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>context<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+        <span class="token punctuation">;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="7-运行项目"><a href="#7-运行项目" class="headerlink" title="7.运行项目"></a>7.运行项目</h4><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
+<li>须将需要接收值的组件包裹在 Provider 内,这样所有内层组件都可以接收到这个 value 值，通俗的讲就是数据的入口。</li>
+<li>接收值的组件,利用 Consumer 组件接收值,内部是个函数</li>
+</ol>
 
                 
             </div>
@@ -516,7 +559,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chenMrs.github.io/2021/03/14/di-yi-ci-bi-shi-shang/">https://chenMrs.github.io/2021/03/14/di-yi-ci-bi-shi-shang/</a>
+                    <a href="https://chenMrs.github.io/2021/06/16/react-kua-zu-jian-chuan-zhi/">https://chenMrs.github.io/2021/06/16/react-kua-zu-jian-chuan-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,8 +597,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AF%95/">
-                                    <span class="chip bg-color">笔试</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -725,9 +768,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/06/16/react-kua-zu-jian-chuan-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="React跨组件传值">
+                        
+                        <span class="card-title">React跨组件传值</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/React/" class="post-category">
+                                    React
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/03/16/di-yi-ci-bi-shi-xia/">
                     <div class="card-image">
@@ -745,9 +839,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -755,55 +849,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/02/19/chui-zhi-ju-zhong-ji-chong-fang-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="垂直居中几种方式">
-                        
-                        <span class="card-title">垂直居中几种方式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/" class="post-category">
-                                    面试题目
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
                 </div>
                 
             </div>
