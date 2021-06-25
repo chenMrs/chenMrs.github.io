@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="你好，hexo, chenMrs_Blog">
+    <meta name="keywords" content="高阶组件, chenMrs_Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>你好，hexo | chenMrs_Blog</title>
+    <title>高阶组件 | chenMrs_Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">你好，hexo</h1>
+                    <h1 class="description center-align post-title">高阶组件</h1>
                 </div>
             </div>
         </div>
@@ -432,14 +432,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/React/" class="post-category">
+                                React
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -448,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-15
+                    2021-06-25
                 </div>
                 
 
@@ -457,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    653
+                    693
                 </div>
                 
 
@@ -477,14 +486,78 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-下载node-js-最好下载12-x版本，这样在部署到github上不出问题"><a href="#1-下载node-js-最好下载12-x版本，这样在部署到github上不出问题" class="headerlink" title="1.下载node.js(最好下载12.x版本，这样在部署到github上不出问题)"></a>1.下载node.js(最好下载12.x版本，这样在部署到github上不出问题)</h2><h2 id="2-下载git"><a href="#2-下载git" class="headerlink" title="2.下载git"></a>2.下载git</h2><h2 id="3-创建github仓库-用自己的注册名称，为特殊的仓库"><a href="#3-创建github仓库-用自己的注册名称，为特殊的仓库" class="headerlink" title="3.创建github仓库(用自己的注册名称，为特殊的仓库)"></a>3.创建github仓库(用自己的注册名称，为特殊的仓库)</h2><h3 id="1-配置ssh-key"><a href="#1-配置ssh-key" class="headerlink" title="1.配置ssh key"></a>1.配置ssh key</h3><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。<br><br>$ cd ~/. ssh       检查本机已存在的ssh密钥<br><br>如果提示：No such file or directory 说明你是第一次使用git。<br><br>ssh-keygen -t rsa -C “邮件地址”<br><br>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br></p>
-<h2 id="4-下载hexo"><a href="#4-下载hexo" class="headerlink" title="4.下载hexo"></a>4.下载hexo</h2><h3 id="1-安装之前先来说几个注意事项："><a href="#1-安装之前先来说几个注意事项：" class="headerlink" title="1.安装之前先来说几个注意事项："></a>1.安装之前先来说几个注意事项：</h3><p>很多命令既可以用Windows的cmd来完成，也可以使用git bash来完成，但是部分命令会有一些问题，为避免不必要的问题，建议全部使用git bash来执行；<br><br>hexo不同版本差别比较大，网上很多文章的配置信息都是基于2.x的，所以注意不要被误导；<br><br>hexo有2种_config.yml文件，一个是根目录下的全局的_config.yml，一个是各个theme下的；<br></p>
-<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><p>$ npm install -g hexo</p>
-<h3 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3.初始化"></a>3.初始化</h3><p>在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是F:\Workspaces\hexo，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。<br></p>
-<p>$ cd /f/Workspaces/hexo/<br><br>$ hexo init<br><br>hexo会自动下载一些文件到这个目录，包括node_modules，<br><br><br>$ hexo g    生成<br>$ hexo s    启动服务<br>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的：</p>
-<p>hexo s是开启本地预览服务，打开浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，因为4000这个端口太常见了，解决端口冲突问题请参考这篇文章：<a target="_blank" rel="noopener" href="http://blog.liuxianan.com/windows-port-bind.html">端口冲突</a></p>
-<p>第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子：</p>
+                <h4 id="什么是高阶组件？"><a href="#什么是高阶组件？" class="headerlink" title="什么是高阶组件？"></a>什么是高阶组件？</h4><pre class="line-numbers language-none"><code class="language-none">高阶组件是接受React组件作为参数，并返回一个新的React组件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="高阶组件解决的问题？"><a href="#高阶组件解决的问题？" class="headerlink" title="高阶组件解决的问题？"></a>高阶组件解决的问题？</h4><pre class="line-numbers language-none"><code class="language-none">高阶组件解决了不同组件要从同一个组件中获取数据<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="高阶组件的例子"><a href="#高阶组件的例子" class="headerlink" title="高阶组件的例子"></a>高阶组件的例子</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">getLocalStorageDate</span><span class="token punctuation">(</span><span class="token parameter">WrappedComponent</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Component <span class="token punctuation">&#123;</span>
+    <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">let</span> data <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"data"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> data <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token comment">// 通过&#123;...this.props&#125; 把传递给当前组件的属性继续传递给被包装的组件WrappedComponent</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>WrappedComponent data<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>data<span class="token punctuation">&#125;</span> <span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">&#125;</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
+<span class="token keyword">class</span> <span class="token class-name">MyComponent2</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>data<span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">const</span> ComponentWithLocalStorage <span class="token operator">=</span> <span class="token function">getLocalStorageDate</span><span class="token punctuation">(</span>MyComponent2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">getLocalStorageDate是一个高阶组件，接受了MyComponent2组件作为参数，返回给ComponentWithLocalStorage组件
+由于在组件MyComponent2中使用props.data接受了父组件（此时相当于从getLocalStorageDate组件中获取）的值
+在App.js中调用&lt;ComponentWithLocalStorage&#x2F;&gt;可获取data值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="高阶组件的参数并非只能是一个值，还可以传入其他的值"><a href="#高阶组件的参数并非只能是一个值，还可以传入其他的值" class="headerlink" title="高阶组件的参数并非只能是一个值，还可以传入其他的值"></a>高阶组件的参数并非只能是一个值，还可以传入其他的值</h4><h4 id="高阶组件传入其他参数例子"><a href="#高阶组件传入其他参数例子" class="headerlink" title="高阶组件传入其他参数例子"></a>高阶组件传入其他参数例子</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">withPersistentData</span><span class="token punctuation">(</span><span class="token parameter">WrappedComponent<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Component <span class="token punctuation">&#123;</span>
+    <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">let</span> data <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> data <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token comment">// 通过&#123;...this.props&#125; 把传递给当前组件的属性继续传递给被包装的组件WrappedComponent</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>WrappedComponent data<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>data<span class="token punctuation">&#125;</span> <span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">&#125;</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyComponent2</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>data<span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">//省略其他逻辑...</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyComponent3</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>data<span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">//省略其他逻辑...</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">const</span> MyComponent2WithPersistentData <span class="token operator">=</span> <span class="token function">withPersistentData</span><span class="token punctuation">(</span>MyComponent2<span class="token punctuation">,</span> <span class="token string">"data"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> MyComponent3WithPersistentData <span class="token operator">=</span> <span class="token function">withPersistentData</span><span class="token punctuation">(</span>MyComponent3<span class="token punctuation">,</span> <span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="HOC-常见用法"><a href="#HOC-常见用法" class="headerlink" title="HOC 常见用法"></a>HOC 常见用法</h4><p><code>高阶组件常用的函数签名形式是：</code></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">HOC</span><span class="token punctuation">(</span><span class="token punctuation">[</span>param<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span>WrappedComponent<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// React Redux's `connect`</span>
+<span class="token keyword">const</span> ConnectedComment <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>commentSelector<span class="token punctuation">,</span> commentActions<span class="token punctuation">)</span><span class="token punctuation">(</span>CommentList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+相当于<span class="token punctuation">;</span>
+<span class="token comment">// connect is a function that returns another function</span>
+<span class="token keyword">const</span> enhance <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>commentListSelector<span class="token punctuation">,</span> commentListActions<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// The returned function is an HOC, which returns a component that is connected</span>
+<span class="token comment">// to the Redux store</span>
+<span class="token keyword">const</span> ConnectedComment <span class="token operator">=</span> <span class="token function">enhance</span><span class="token punctuation">(</span>CommentList<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="高阶组件的父组件的区别"><a href="#高阶组件的父组件的区别" class="headerlink" title="高阶组件的父组件的区别"></a>高阶组件的父组件的区别</h4><pre class="line-numbers language-none"><code class="language-none">有些同学可能会觉得高阶组件有些类似父组件的使用。例如，我们完全可以把高阶组件中的逻辑放到一个父组件中去执行，执行完成的结果再传递给子组件。从逻辑的执行流程上来看，高阶组件确实和父组件比较相像，但是高阶组件强调的是逻辑的抽象。高阶组件是一个函数，函数关注的是逻辑；父组件是一个组件，组件主要关注的是UI&#x2F;DOM。如果逻辑是与DOM直接相关的，那么这部分逻辑适合放到父组件中实现；如果逻辑是与DOM不直接相关的，那么这部分逻辑适合使用高阶组件抽象。
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -510,7 +583,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chenMrs.github.io/2021/02/15/ni-hao-hexo/">https://chenMrs.github.io/2021/02/15/ni-hao-hexo/</a>
+                    <a href="https://chenMrs.github.io/2021/06/25/gao-jie-zu-jian/">https://chenMrs.github.io/2021/06/25/gao-jie-zu-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,8 +621,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -719,62 +792,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/02/15/hexo-2/">
+                <a href="/2021/06/25/gao-jie-zu-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="hexo(2)">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="高阶组件">
                         
-                        <span class="card-title">hexo(2)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            chenMrs
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/02/15/ni-hao-hexo/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="你好，hexo">
-                        
-                        <span class="card-title">你好，hexo</span>
+                        <span class="card-title">高阶组件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -785,12 +814,16 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            chenMrs
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/React/" class="post-category">
+                                    React
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -799,8 +832,57 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/16/react-kua-zu-jian-chuan-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="React跨组件传值">
+                        
+                        <span class="card-title">React跨组件传值</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/React/" class="post-category">
+                                    React
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
