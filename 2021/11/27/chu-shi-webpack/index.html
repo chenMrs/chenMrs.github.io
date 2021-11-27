@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一次笔试上, chenMrs_Blog">
+    <meta name="keywords" content="初识webpack, chenMrs_Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一次笔试上 | chenMrs_Blog</title>
+    <title>初识webpack | chenMrs_Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一次笔试上</h1>
+                    <h1 class="description center-align post-title">初识webpack</h1>
                 </div>
             </div>
         </div>
@@ -430,13 +430,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%AC%94%E8%AF%95/">
-                                <span class="chip bg-color">笔试</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -448,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-14
+                    2021-11-27
                 </div>
                 
 
@@ -457,7 +453,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    381
+                    1.2k
                 </div>
                 
 
@@ -477,18 +473,139 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>今天早早的来到图书馆，赶早的抢了个好位置，正在学习的时候，之前投过的公司的hr给我发了信息，让我发简历过去，再根据它们公司的制度填了申请资料。没想到过一会就发了笔试题。一点准备都没有，脑子蒙蒙的写完了笔试题，让我印象最深刻的问题是提高css选择器优先级的方式。感觉自己从来没有考虑过这个问题。然后写完我就感觉自己没戏了。但是还是要总结一下笔试的题目。问题如下：</p>
-<h2 id="1-数组去重"><a href="#1-数组去重" class="headerlink" title="1.数组去重"></a>1.数组去重</h2><ul>
-<li>我用的是我一直用的方法 Array.from(new Set(arr))<h2 id="2-实现左右固定，中间适应的方式"><a href="#2-实现左右固定，中间适应的方式" class="headerlink" title="2.实现左右固定，中间适应的方式"></a>2.实现左右固定，中间适应的方式</h2></li>
-<li>我用的是左栏左浮动 右栏右浮动 中间栏放最后<h2 id="3-获取对象key值"><a href="#3-获取对象key值" class="headerlink" title="3.获取对象key值"></a>3.获取对象key值</h2></li>
-<li>我写了两种 循环 object.keys()<h2 id="4-typeof与instanceof区别"><a href="#4-typeof与instanceof区别" class="headerlink" title="4.typeof与instanceof区别"></a>4.typeof与instanceof区别</h2></li>
-<li>我大致写的是typeof返回字符串 instanceof是用于判断一个变量是否某个对象的实例<h2 id="5-css选择器优先级"><a href="#5-css选择器优先级" class="headerlink" title="5.css选择器优先级"></a>5.css选择器优先级</h2></li>
-<li>style内部写的&gt;id&gt;class&gt;标签&gt;继承<h2 id="6-css水平居中"><a href="#6-css水平居中" class="headerlink" title="6.css水平居中"></a>6.css水平居中</h2></li>
-<li>让我写多种 我好像写重复了 </li>
-<li>1.margin + width</li>
-<li>2.display：inline-block + text-align:center               </li>
-<li>3.绝对定位+transform      <h2 id="7-div盒模型"><a href="#7-div盒模型" class="headerlink" title="7.div盒模型"></a>7.div盒模型</h2></li>
-<li>我没明白它的考点是什么 我就写div具有内容，内外边距，边框属性。<br>写到这感觉自己更凉了，害，等我学习一波再来写下一篇。</li>
+                <h3 id="webpack-是基于-JavaScript-的应用程序的模块静态打包工具"><a href="#webpack-是基于-JavaScript-的应用程序的模块静态打包工具" class="headerlink" title="webpack 是基于 JavaScript 的应用程序的模块静态打包工具"></a>webpack 是基于 JavaScript 的应用程序的模块静态打包工具</h3><p>当他处理程序时,他会从内部的一个或多个入口去构建依赖图(每当一个文件依赖一个文件,webpack 会直接认为他们存在直接依赖关系.当 他 处理应用程序时，它会根据命令行参数中或配置文件中定义的模块列表开始处理。 从 <a target="_blank" rel="noopener" href="https://webpack.docschina.org/concepts/entry-points/"><strong>入口</strong></a> 开始，webpack 会递归的构建一个 <strong>依赖关系图</strong>，这个依赖图包含着应用程序中所需的每个模块，然后将所有模块打包为少量的 <strong>bundle</strong> —— 通常只有一个 —— 可由浏览器加载)</p>
+<p><strong>1.入口(entry)</strong></p>
+<ul>
+<li><ul>
+<li>作为依赖图的开始的文件,默认值为./src/index.js 可以通过 webpack.config.js 中的 entry 属性去设置一个或多个入口</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span> entry<span class="token operator">:</span> <span class="token string">"./path/to/my/entry/file.js"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>2.输出(output)</strong></p>
+<ul>
+<li>作为 webpack 的 bundle 输出的位置,以及如何命名.</li>
+<li>__dirname”是 node.js 中的一个全局变量，它指向当前执行脚本所在的目录</li>
+<li>默认值是 ./dist/main.js，其他生成文件默认放置在 ./dist 文件夹中。(配置在 webpack.config.js)</li>
+</ul>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//引入node的path模块</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  entry<span class="token operator">:</span> <span class="token string">"./path/to/my/entry/file.js"</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"dist"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">//当前执行脚本所在的目录下的 dist文件夹中</span>
+    filename<span class="token operator">:</span> <span class="token string">"my-first-webpack.bundle.js"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>关于 path.resolve 的判断</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"/foo/a"</span><span class="token punctuation">,</span> <span class="token string">"./b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns '/foo/a/b'</span>
+path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"/foo/a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns '/foo/a/b'</span>
+path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"/foo/a"</span><span class="token punctuation">,</span> <span class="token string">"/b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns '/b'</span>
+path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"/foo/a"</span><span class="token punctuation">,</span> <span class="token string">"../b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns '/foo/b'</span>
+path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"home"</span><span class="token punctuation">,</span> <span class="token string">"/foo/a"</span><span class="token punctuation">,</span> <span class="token string">"../b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns '/foo/b' path.resolve('home','./foo/a', '../b')   // returns '/home/foo/b' path.resolve('home','foo/a', '../b')   // returns '/home/foo/b'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>字符以 / 开头: 不会拼接到前面的路径(因为拼接到此已经是一个绝对路径)；</li>
+<li>以 …/ 开头: 拼接前面的路径，且不含最后一节路径；</li>
+<li>以 ./ 开头: 或者没有符号 则拼接前面路径 。</li>
+<li>如果在处理完所有给定的 path 片段之后还未生成绝对路径，则再加上当前工作目录</li>
+</ul>
+<p><strong>3.loader</strong></p>
+<ul>
+<li><ul>
+<li>webpack 只能识别 JavaScript 和 json 文件.loader 可以使 webpack 去识别其他的文件类型,并将他们转化为有效的模块,以供应用程序使用和能被添加到依赖图中.</li>
+</ul>
+</li>
+</ul>
+<p>在 webpack 中 loader 有两个属性:</p>
+<ol>
+<li>test:识别出哪些文件类型会被转化</li>
+<li>use:使用什么 loader 去进行转化</li>
+</ol>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  output<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    filename<span class="token operator">:</span> <span class="token string">"my-first-webpack.bundle.js"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  module<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span> test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.txt$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> use<span class="token operator">:</span> <span class="token string">"raw-loader"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span> <span class="token comment">//碰到「在 require()/import 语句中被解析为 '.txt' 的路径」时，在你对它打包之前，先 use(使用) raw-loader 转换一下</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>4.插件(plugin)</strong></p>
+<ul>
+<li>可以处理打包优化,资源管理,注入环境变量</li>
+<li>想要使用一个插件，你只需要 require() 它，然后把它添加到 plugins 数组中</li>
+</ul>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"html-webpack-plugin"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 通过 npm 安装</span>
+<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"webpack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 用于访问内置插件</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  module<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span> test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.txt$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> use<span class="token operator">:</span> <span class="token string">"raw-loader"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> template<span class="token operator">:</span> <span class="token string">"./src/index.html"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>常用插件</strong></p>
+<ol>
+<li><p><strong>html-webpack-plugin:生成 HTML 文件</strong></p>
+</li>
+<li><p><strong>copy-webpack-plugin:**</strong>在 webpack 中拷贝文件和文件夹**</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">from</span>    定义要拷贝的源文件 <span class="token keyword">from</span>：__dirname<span class="token operator">+</span><span class="token string">'/src/components'</span> to      定义要拷贝到的目标文件夹
+to<span class="token operator">:</span> __dirname<span class="token operator">+</span><span class="token string">'/dist'</span> toType  file 或者 dir  可选，默认是文件 force   强制覆盖前面的插件   可选，默认是文件
+context 可选，默认base   context可用specific  context flatten  只拷贝指定的文件  可以用模糊匹配 ignore  忽略拷贝指定的文件  可以模糊匹配<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li><p><strong>friendly-errors-webpack-plugin(优化控制台)</strong></p>
+</li>
+</ol>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">plugins<span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token comment">// ...</span>
+    <span class="token keyword">new</span> <span class="token class-name">FriendlyErrorsWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+        <span class="token comment">// 成功的时候输出</span>
+        compilationSuccessInfo<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            messages<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Your application is running here: http://localhost:8080</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">]</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token comment">// 是否每次都清空控制台</span>
+        clearConsole<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    devServer<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        contentBase<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"../dist"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        host<span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+        port<span class="token operator">:</span> <span class="token number">8080</span><span class="token punctuation">,</span>
+        open<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        quiet<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// 如果使用webpack-dev-server，需要设为true，禁止显示devServer的console信息  &#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li><strong>webpack-merge(**有效地管理配置文件的方法</strong>)**</li>
+</ol>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> merge <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"webpack-merge"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> prodEnv <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./prod.env"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">merge</span><span class="token punctuation">(</span>prodEnv<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+  <span class="token constant">NODE_ENV</span><span class="token operator">:</span> <span class="token string">'"development"'</span><span class="token punctuation">,</span>
+  <span class="token constant">API_ROOT</span><span class="token operator">:</span> <span class="token string">'"https://testqipei.baijiayun.com/"'</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>5. Hot Module Replacement(热模块替换)</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    mode<span class="token operator">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span>
+    devtool<span class="token operator">:</span> <span class="token string">'cheap-module-eval-source-map'</span><span class="token punctuation">,</span>
+    devServer<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        contentBase<span class="token operator">:</span> <span class="token string">'./dist'</span><span class="token punctuation">,</span>
+        open<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        hot<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        hotOnly<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+            template<span class="token operator">:</span> <span class="token string">'src/index.html'</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token class-name">CleanWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>HotModuleReplacementPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment">//1.我们需要在devServer中开启HMR功能，即hot: true，意思是我们开启了HMR功能，</span>
+    <span class="token comment">//2.配套的我们也开启hotOnly: true意为即使是HMR没有生效，我们也不去刷新页面。</span>
+    <span class="token comment">//3.我们引入webpack，然后从中引入HotModuleReplacementPlugin并配置。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>6.NamedModulesPlugin(热加载直接返回更新的文件名,而不是 id)</strong></p>
+<p><strong>5.模式(mode)</strong></p>
+<ul>
+<li><ul>
+<li>通过选择 development, production 或 none 之中的一个，来设置 mode 参数，你可以启用 webpack 内置在相应环境下的优化。其默认值为 production。</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -516,7 +633,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chenMrs.github.io/2021/03/14/di-yi-ci-bi-shi-shang/">https://chenMrs.github.io/2021/03/14/di-yi-ci-bi-shi-shang/</a>
+                    <a href="https://chenMrs.github.io/2021/11/27/chu-shi-webpack/">https://chenMrs.github.io/2021/11/27/chu-shi-webpack/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,11 +670,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%AC%94%E8%AF%95/">
-                                    <span class="chip bg-color">笔试</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -725,54 +838,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/03/16/di-yi-ci-bi-shi-xia/">
+                <a href="/2021/11/27/chu-shi-webpack/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="第一次笔试(下)">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="初识webpack">
                         
-                        <span class="card-title">第一次笔试(下)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            chenMrs
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/02/19/chui-zhi-ju-zhong-ji-chong-fang-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="垂直居中几种方式">
-                        
-                        <span class="card-title">垂直居中几种方式</span>
+                        <span class="card-title">初识webpack</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -783,14 +860,52 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            chenMrs
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/25/gao-jie-zu-jian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="高阶组件">
+                        
+                        <span class="card-title">高阶组件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/" class="post-category">
-                                    面试题目
+                            <a href="/categories/React/" class="post-category">
+                                    React
                                 </a>
                             
                             
